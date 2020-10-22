@@ -1,0 +1,17 @@
+{% extends "base.html.j2" %}
+
+{% block obsah %}
+
+Ndes už jdeme domů!!!
+
+<form method="get">
+    <input type="text" name="x" value="{{request.args.get('x') or ''}}" placeholder="číslo X" />
+    
+    <input type="text" name="y" value="{{request.args.get('y') or ''}}" placeholder="číslo Y" />
+    <input type="submit" value="Sečti to." />
+</form>
+
+Vysledek: {{z}}
+
+{% endblock obsah %}
+
